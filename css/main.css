@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    color:#fff;
+}
+#wrapper *{
+    background: gray;
+    box-shadow: 0 0 0 1px #fff;
+    display: flex;
+    justify-content: center;
+}
+#wrapper>*>*, #wrapper>*>*>*{
+    align-items: center;
+}
+
+header>*, article>*, aside{
+    flex-grow: 1;
+}
+
+header>div:nth-child(2){
+    flex-grow:2;
+}
+#mainWrapper{
+    flex-grow: 3;
+    flex-direction: column;
+    align-items: unset;
+}
+header,article{
+    height: 10%;
+}
+section{
+    height: 80%;
+}
+footer{
+    height: 12.5%;
+}
+main{
+    flex: 1;
+}
+#wrapper .submenu{
+    display: none;
+}
+#wrapper header>div:nth-child(2) input{
+    display: none;
+} 
+#wrapper a{
+    text-decoration: none;
+    color: inherit;
+    box-shadow: none;
+}
+#wrapper header .burger{
+    display: none;
+}
+#wrapper input{
+    border: none;
+    box-shadow: none;
+    background: #fff;
+}
+#wrapper .fa-search{
+    background: #fff;
+    color: gray;
+}
+#wrapper header>div:nth-child(2) .fa-search{
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    #wrapper article>*{
+        display: none;
+    }
+    #wrapper .submenu{
+        display: flex;
+    }
+    #wrapper .search{
+        display: none;
+    }
+    header>div:nth-child(2) {
+        flex-grow: 5;
+    }
+    #wrapper header>div:nth-child(2) {
+        justify-content: space-around;
+    }
+    #wrapper header>div:nth-child(2) input{
+        display: flex;
+    } 
+    #wrapper header .burger{
+        display: none;
+    }
+    #wrapper header>div:nth-child(2) .fa-search{
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+   #wrapper header>div:nth-child(2) {
+        display: none;
+    }
+    #wrapper header .burger{
+        flex-grow: 6;
+        justify-content: flex-end;
+        align-items: start;
+    }
+    #wrapper .fa-bars{
+        font-size: 50px;
+        box-shadow: none;
+    }
+    #wrapper aside{
+        display: none;
+    }
+    #wrapper header .burger{
+        display: flex;
+    }
+}
